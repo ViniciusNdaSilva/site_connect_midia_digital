@@ -141,31 +141,44 @@ section {
   right: 15px;
   bottom: 15px;
   z-index: 99999;
-  background: #30d4d7;
   width: 40px;
   height: 40px;
   border-radius: 4px;
   transition: all 0.4s;
 }
 
-.back-to-top i {
-  font-size: 24px;
-  color: #ffffff;
-  line-height: 0;
+.back-to-top img {
+  width: 50px;
 }
 
 .back-to-top:hover {
   background: #ffffff;
-  color: #30d4d7;
-}
-
-.back-to-top i:hover {
-  color: #30d4d7;
 }
 
 .back-to-top.active {
   visibility: visible;
   opacity: 1;
+}
+
+.back-to-top {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+/* Define a animação usando keyframes */
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Aplica a animação quando o botão é hover (sobrevoado) */
+.back-to-top {
+  animation: bounce 1s infinite;
 }
 
 /*--------------------------------------------------------------
